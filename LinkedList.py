@@ -39,8 +39,7 @@ class LinkedList:
             head_node.nextvalue = newnode
 
     def delete(self, index):
-        node = self.head
-        i = 0
+        node, i = self.head, 0
         if index == 0:
             self.head = node.nextvalue
         else:
@@ -54,8 +53,7 @@ class LinkedList:
                 i += 1
 
     def get_index(self, el):
-        node = self.head
-        i = 0
+        node, i = self.head, 0
         if node.value == el: return 0
         while node.nextvalue:
             node = node.nextvalue
@@ -90,8 +88,7 @@ class LinkedList:
         print(node.value)
 
     def get_list_linked_list_value(self):
-        node = self.head
-        arr = []
+        node, arr = self.head, []
         while node.nextvalue:
             arr.append(node.value)
             node = node.nextvalue
