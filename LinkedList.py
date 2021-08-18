@@ -66,7 +66,7 @@ class LinkedList:
     def search_for_insert(self, index, node, newnode):
         if node.nextvalue is None:
             node.nextvalue = newnode
-        if index == 1:
+        elif index == 1:
             nodenext = node.nextvalue
             node.nextvalue = newnode
             newnode.nextvalue = nodenext
@@ -79,8 +79,8 @@ class LinkedList:
             old_head = self.head
             self.head = newnode
             newnode.nextvalue = old_head
-            return
-        self.search_for_insert(index, self.head, newnode)
+        else:
+            self.search_for_insert(index, self.head, newnode)
 
     def display(self):
         node = self.head
