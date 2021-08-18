@@ -103,23 +103,3 @@ class LinkedList:
 
     def clear(self):
         self.head = None
-
-
-node = LinkedList()
-
-node.sort_add(4)
-node.sort_add(2)
-node.sort_add(223)
-node.sort_add(-223)
-node.sort_add(9)
-node.insert(4, 999)
-node.delete(0)
-node.add_to_end(1212)
-node.add_to_end(1212)
-node.add_to_end(1212)
-node.clear_all_child_node()
-node.add_to_end(4)
-node.insert(0, 1)
-node.clear_all_child_node()
-node.display()
-print(node.get_list_linked_list_value())
