@@ -164,7 +164,7 @@ class DoubleLinkedList:
     def list_to_linked_list(self, elements):
         self.elements = elements
         self.max_size()
-        self.size += len(self.elements)
+        self.size = len(self.elements)
         if isinstance(self.elements, list):
             for element in self.elements:
                 new_node = self.Node(element)
